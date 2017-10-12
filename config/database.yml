@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 25
+  username: sblazhko
+  password: 2525
+
+development:
+  <<: *default
+  database: weather_app_dev
+
+test:
+  <<: *default
+  database: weather_app_test
+
+production:
+  <<: *default
+  database: weather_app_prod
+

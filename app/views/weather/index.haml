@@ -1,0 +1,10 @@
+.container
+  .row.main-block
+    .col-md-4.page-title
+      %h1 Weather forecast
+    .col-md-4.search-input
+      %p
+        = form_tag weather_search_path, method: :post, remote: true do
+          .input-group
+            = text_field_tag :weather_search_input, nil, placeholder: "Please write any city :)", class: "form-control"
+    .row.forecast-block

@@ -1,0 +1,22 @@
+.col-md-3
+  .data-block
+    .city-name
+      = weather_response.original_name
+    .row.temp-block
+      .col-md-12
+        %p.day
+          = weather_response.created_at.strftime("%A")
+        %p.date-number
+          = weather_response.created_at.strftime("%d")
+        %p
+          = weather_response.created_at.strftime("%B")
+      .col-md-12
+        %img{src: "http://openweathermap.org/img/w/#{weather_response.precipitation_icon}.png"}
+      .col-md-6
+        .text-muted min.
+        %p
+          = weather_response.min_temp.to_i
+      .col-md-6
+        .text-muted max.
+        %p
+          = weather_response.max_temp.to_i

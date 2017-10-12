@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uniq_identifier: MyString
+
+two:
+  uniq_identifier: MyString
